@@ -3,12 +3,14 @@ import numpy as np
 import pickle
 
 # Memuat model yang telah disimpan
-with open('/content/drive/MyDrive/Skripsi 2/DecisionTree_best_model.pkl', 'rb') as file:
+# Misalnya jika app.py dijalankan dari dalam direktori 'Emas'
+with open('DecisionTree_best_model.pkl', 'rb') as file:
     dt_model = pickle.load(file)
-with open('/content/drive/MyDrive/Skripsi 2/RandomForest_best_model.pkl', 'rb') as file:
+with open('RandomForest_best_model.pkl', 'rb') as file:
     rf_model = pickle.load(file)
-with open('/content/drive/MyDrive/Skripsi 2/AdaBoost_best_model.pkl', 'rb') as file:
+with open('AdaBoost_best_model.pkl', 'rb') as file:
     ada_model = pickle.load(file)
+
 
 # Mengatur konfigurasi halaman Streamlit
 st.set_page_config(page_title="Gold Price Prediction", page_icon=":moneybag:")
